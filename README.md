@@ -23,6 +23,9 @@ It provides two API endpoints: 1. Process Receipts; 2. Get Points.
 - Response: A JSON object containing the number of points awarded.
 
 ## Installation
+### Prerequisites
+- latest version of [docker](https://docs.docker.com/engine/install/)
+### Steps
 1. Clone the repository:
    ```bash
    git clone https://github.com/LucasTzz/receipt-processor.git
