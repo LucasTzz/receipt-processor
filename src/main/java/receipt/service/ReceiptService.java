@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import receipt.entity.Item;
 import receipt.exception.ReceiptNotFoundException;
+import receipt.exception.TotalPriceNotMatchException;
 import receipt.repository.ReceiptRepository;
 import receipt.entity.Receipt;
 
@@ -25,6 +26,10 @@ public class ReceiptService {
      * @return receipt
      */
     public Receipt saveReceipt(Receipt receipt) {
+        double totalPrice = receipt.getItems().stream().mapToDouble(Item::getPrice).sum();
+        if (totalPrice != receipt.getTotal()) {
+            throw new TotalPriceNotMatchException();
+        }
         receipt.setPoints(calculatePoints(receipt));
         return receiptRepository.save(receipt);
     }

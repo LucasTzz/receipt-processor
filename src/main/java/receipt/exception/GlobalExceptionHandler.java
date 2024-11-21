@@ -55,4 +55,16 @@ public class GlobalExceptionHandler {
         errorDetails.put("message", ex.getMessage());
         return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
     }
+
+    /**
+     * handle total price not match
+     * @param ex ex
+     * @return responseEntity
+     */
+    @ExceptionHandler(TotalPriceNotMatchException.class)
+    ResponseEntity<?> handleTotalPriceNotMatch(TotalPriceNotMatchException ex) {
+        Map<String, Object> errorDetails = new HashMap<>();
+        errorDetails.put("message", ex.getMessage());
+        return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
+    }
 }
