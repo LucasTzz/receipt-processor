@@ -26,21 +26,13 @@ It provides two API endpoints: 1. Process Receipts; 2. Get Points.
 ### Prerequisites
 - latest version of [docker](https://docs.docker.com/engine/install/)
 ### Steps
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/LucasTzz/receipt-processor.git
-    ```
-2. Navigate to the directory:
+1. Pull the Docker Image from Docker Hub:
     ```bash
-    cd receipt-processor
+   docker pull olivertzz/receipt-processor:1.0.0
     ```
-3. Build the Docker Image:
+2. Run the Docker Container
     ```bash
-   docker build -t receipt-processor-app .
-    ```
-4. Run the Docker Container
-    ```bash
-    docker run -it -p 8080:8080 receipt-processor-app
+    docker run -p 8080:8080 olivertzz/receipt-processor:1.0.0
     ```
 
 ## Usage

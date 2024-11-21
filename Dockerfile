@@ -1,6 +1,8 @@
-FROM arm64v8/openjdk:17-ea-16-jdk
+FROM openjdk:17-jdk-slim
 
 WORKDIR /app
+
+COPY receiptProcessor.jar receiptProcessor.jar
 
 EXPOSE 8080
 
