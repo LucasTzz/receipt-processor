@@ -10,6 +10,9 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+/**
+ * used for converting between entity objects and DTO objects
+ */
 public class Convertor {
 
     /**

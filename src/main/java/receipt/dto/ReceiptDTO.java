@@ -7,9 +7,12 @@ import jakarta.validation.constraints.Pattern;
 
 import java.util.List;
 
-
+/**
+ * DTO used in request for process receipts API
+ */
 public class ReceiptDTO {
 
+    // input validation
     @NotBlank(message = "retailer cannot be blank")
     @Pattern(regexp = "^[\\w\\s\\-&]+$", message = "invalid retailer format")
     private String retailer;

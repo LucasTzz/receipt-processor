@@ -10,6 +10,9 @@ import receipt.entity.Receipt;
 import java.time.LocalTime;
 import java.util.UUID;
 
+/**
+ * receipt process services
+ */
 @Service
 public class ReceiptService {
 

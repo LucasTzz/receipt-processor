@@ -12,6 +12,9 @@ import receipt.util.Convertor;
 
 import java.util.UUID;
 
+/**
+ * API endpoints
+ */
 @RestController
 @RequestMapping("/receipts")
 public class ReceiptController {
